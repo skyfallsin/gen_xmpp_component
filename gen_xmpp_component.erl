@@ -30,9 +30,9 @@ init([]) ->
 	io:format("Started eXMPP~n", []),
 	Session = exmpp_component:start_link(),
 	exmpp_component:auth(Session, ?COMPONENT, ?SECRET),
-  _StreamId = exmpp_component:connect(Session, ?SERVER_HOST, ?SERVER_PORT),
-  ok = exmpp_component:handshake(Session),
-  {ok, #state{session = Session}}.
+	_StreamId = exmpp_component:connect(Session, ?SERVER_HOST, ?SERVER_PORT),
+	ok = exmpp_component:handshake(Session),
+	{ok, #state{session = Session}}.
 init() -> init([]).
 
 handle_call(stop, _From, State) ->
