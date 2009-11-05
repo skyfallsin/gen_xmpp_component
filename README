@@ -1,0 +1,7 @@
+gen_xmpp_component
+==================
+A generic XMPP component that you can use to write your own.
+
+Requirements
+===========
+exmpp (https://support.process-one.net/doc/display/EXMPP)
